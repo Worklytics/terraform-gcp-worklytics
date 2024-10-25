@@ -28,7 +28,6 @@ variable "service_account_email" {
 variable "psoxy_connection" {
   type = object({
     integration = string
-    kind        = string
     endpoint    = string
   })
   description = "The connection details for a Psoxy connection to be created via Worklytics Tenant API."

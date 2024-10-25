@@ -27,7 +27,7 @@ curl -X POST https://${var.tenant_api_host}/tenant-api/data-connections \
   -d '{
        "integrationId": "${var.psoxy_connection.integration}",
         "settings": {
-          "PROXY_DEPLOYMENT_KIND": "${var.psoxy_connection.kind}",
+          "PROXY_DEPLOYMENT_KIND": "GCP",
           "PROXY_ENDPOINT": "${var.psoxy_connection.endpoint}"
         }
      }'

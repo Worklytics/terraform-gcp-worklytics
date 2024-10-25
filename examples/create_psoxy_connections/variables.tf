@@ -28,7 +28,6 @@ variable "tenant_api_host" {
 variable "psoxy_connections" {
   type = list(object({
     integration = string
-    kind        = string
     endpoint    = string
   }))
   description = "The connection details for Psoxy connections to be created via Worklytics Tenant API."

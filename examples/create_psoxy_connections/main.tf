@@ -1,5 +1,3 @@
-# TODO modules referenced by relative path until published in registry, or in a public repo
-
 # create the SA needed to auth with the Worklytics Tenant API
 module "tenant_api_auth" {
   source = "../../modules/sa_tenant_api_auth"
@@ -18,7 +16,6 @@ module "create_psoxy_connection_script" {
   }
   psoxy_connection = {
     integration = each.value.integration
-    kind        = each.value.kind
     endpoint    = each.value.endpoint
   }
   psoxy_connection_script_path = coalesce(var.psoxy_connection_script_path, path.module)
