@@ -33,3 +33,8 @@ variable "psoxy_connections" {
   }))
   description = "The connection details for Psoxy connections to be created via Worklytics Tenant API."
 }
+
+variable "psoxy_connection_script_path" {
+  type        = string
+  description = "Where to create the script to create the Psoxy connection"
+}

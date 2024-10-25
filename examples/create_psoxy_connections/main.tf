@@ -21,7 +21,7 @@ module "create_psoxy_connection_script" {
     kind        = each.value.kind
     endpoint    = each.value.endpoint
   }
-  psoxy_connection_script_path = path.module
+  psoxy_connection_script_path = coalesce(var.psoxy_connection_script_path, path.module)
   service_account_email        = module.tenant_api_auth.worklytics_tenant_api_sa
   worklytics_tenant_id         = var.worklytics_tenant_id
   tenant_api_host              = var.tenant_api_host
