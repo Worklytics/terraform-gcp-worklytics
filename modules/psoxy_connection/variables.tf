@@ -27,8 +27,11 @@ variable "service_account_email" {
 
 variable "psoxy_connection" {
   type = object({
-    integration = string
-    endpoint    = string
+    integration         = string           # The integration ID to use for this connection.
+    endpoint            = optional(string) # The endpoint of the Cloud Function (Work Data connections use-case).
+    bucket              = optional(string) # The Cloud Storage bucket (Bulk Data connections use-case).
+    parser_id           = optional(string) # Bulk Data connections only.
+    github_organization = optional(string) # GitHub Connections only.
   })
   description = "The connection details for a Psoxy connection to be created via Worklytics Tenant API."
 }
