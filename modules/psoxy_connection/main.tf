@@ -8,7 +8,7 @@ locals {
   )
   json_payload = jsonencode({
     integrationId = var.psoxy_connection.integration,
-    settings = local.settings
+    settings      = local.settings
   })
 }
 

@@ -15,10 +15,10 @@ module "create_psoxy_connection_script" {
     psoxy_connection.integration => psoxy_connection
   }
   psoxy_connection = {
-    integration = each.value.integration
-    endpoint    = each.value.endpoint
-    bucket      = each.value.bucket
-    parser_id   = each.value.parser_id
+    integration         = each.value.integration
+    endpoint            = each.value.endpoint
+    bucket              = each.value.bucket
+    parser_id           = each.value.parser_id
     github_organization = each.value.github_organization
   }
   psoxy_connection_script_path = coalesce(var.psoxy_connection_script_path, path.module)
